@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Data</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    body{
+       background-color: pink;
+       color:white;
+     }  
+      .wrapper{
+       width: 300px;
+       max-width: 90px;
+       margin: 0 auto:
+        }
+       .wrapper label{
+        dispaly:block:
+        margin: 0.5em;
+        }  
+        .wrapper label input{
+           font-size:10px;
+           padding: 0;
+          }
+     </style>
+
+</head>
+      <body>
+
+       <h1>Form Data</h1>
+
+       <div class="wrapper">
+         
+        <form class="form">
+            
+            <label id="fnamefield">
+            <input type="text" id="fname" name="fname" placeholder="Please enter firstname" required><br>
+
+            <label id="lnamefield">
+            <input type="text" id="lname" name="lname" placeholder="Please enter lastname" required><br>
+
+            <label id="ftnamefield">
+            <input type="text" id="fathername" name="fathername" placeholder="Please enter correct name" required><br>
+
+            <label id="mtnamefield">
+            <input type="text" id="mothername" name="mothername" placeholder="Please enter correct name" required><br>
+
+            <label id="phonefield">
+            <input type="text" id="phonenumber" name="phonenumber" placeholder="Please enter Phoneno" required><br>
+
+            <label id="aadharfield">
+            <input type="text" id="Aadharnumber" name="aadharnumber" placeholder="Please enter Aadharno" required><br>
+
+            <label id="coursefield">
+            <select name="coursesEnrolled" id="coursesEnrolled" placeholder="course" required>
+
+                <option value="">Please Select</option>
+                <option value=CSharp>CSharp</option>
+                <option value=Java>Java</option>
+                <option value=Javascript>Javascript</option>
+                <option value=Angular>Angular</option>
+            </select><br><br>
+            <input type=Submit value="Submit"><br>
+        </form>
+       </body>
+    </div>
+</div>
+      
+    <script>
+      
+      const wrapper = document.queryselector('wrapper'),
+      form = wrapper.querySelectorAll('.form")
+      submitInput = form[0].querySelector('input[type="submit"]');
+
+      function getDataForm(e){
+   
+      e.preventDefault();
+      
+      var formData = FormData();
+     
+      alert( formData.get('namefield') + '-' + formData.get('phonefield') + '-' + formData.get('aadharfield') + 
+      '-' +formData.get('coursefield));
+    
+      document.addEventListener('DOMcontentLoaded', function()){
+
+      submitinput.addEventlistener('click', getDataform, false);
+
+      } false;
+  </script>
+  </html>
